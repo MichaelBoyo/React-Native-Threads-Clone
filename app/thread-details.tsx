@@ -1,6 +1,6 @@
 import { useRoute } from "@react-navigation/native";
 import { Reply, Thread } from "../types/threads";
-import ThreadItem, { blurhash } from "../components/ThreadItem";
+import ThreadItem from "../components/ThreadItem";
 import {
   Button,
   SafeAreaView,
@@ -47,12 +47,6 @@ export default function ThreadDetails(): JSX.Element {
         </View>
       </ScrollView>
       <View style={styles.replyContainer}>
-        {/* <Image
-          style={styles.image}
-          placeholder={blurhash}
-          contentFit="cover"
-          transition={500}
-        /> */}
         <TextInput
           placeholder="Add reply"
           value={replyContent}
