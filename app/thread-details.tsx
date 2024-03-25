@@ -47,19 +47,25 @@ export default function ThreadDetails(): JSX.Element {
         </View>
       </ScrollView>
       <View style={styles.replyContainer}>
-        <Image
+        {/* <Image
           style={styles.image}
           placeholder={blurhash}
           contentFit="cover"
           transition={500}
-        />
+        /> */}
         <TextInput
           placeholder="Add reply"
           value={replyContent}
           onChangeText={setReplyContent}
           style={styles.input}
         />
-        <Button title="Reply" disabled={!replyContent} onPress={handleReply} />
+        <View style={styles.btn}>
+          <Button
+            title="Reply"
+            disabled={!replyContent}
+            onPress={handleReply}
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
@@ -73,7 +79,10 @@ const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 30,
     borderRadius: 10,
+    color: "white",
+    maxWidth: 280,
   },
+  btn: {},
   replyContainer: {
     flexDirection: "row",
     padding: 15,
