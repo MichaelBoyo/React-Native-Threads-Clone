@@ -12,7 +12,6 @@ import {
 import ReplyItem from "../components/ReplyItem";
 import { useState } from "react";
 import { createRandomFollower } from "../utils/generate-dommy-data";
-import { Image } from "expo-image";
 
 export default function ThreadDetails(): JSX.Element {
   const route = useRoute();
